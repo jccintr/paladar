@@ -1,0 +1,47 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background-color: #f6a800;
+  justify-content: center;
+  font-weight: 600;
+  border-bottom: 2px solid #441e1f;
+}
+
+.container-titulo {
+  margin-left: 10px;
+
+  justify-content: left;
+}
+.nome-estabelecimento {
+  color: #441e1f;
+
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.linha-status {
+  background-color: red;
+}
+.status-estabelecimento {
+  color: #441e1f;
+  font-size: 16px;
+}
+
+.telefone-estabelecimento {
+  color: #441e1f;
+  font-size: 16px;
+}
+
+.titulo {
+  font-style: italic;
+  margin: 20px;
+}
+.imgLogo {
+  width: 120px;
+  height: 90px;
+}

@@ -1,0 +1,69 @@
+.corpoCheckout {
+    width: "100%";
+    height: "100%";
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .div-titulo-checkout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    width: 330px;
+    height: 30px;
+    
+  }
+  
+  .titulo-checkout {
+    color: black;
+    text-align: left;
+    width: 300px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .label-checkout {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      font-weight: normal;
+      font-size: 16px;
+      margin: 0;
+  }
+  .p-entregar-retirar-selecionado {
+    color: black;
+      border-bottom: 4px solid #dd1f26;
+    
+  }
+  .p-entregar-retirar {
+      color: black;
+  }
+
+  .input-checkout {
+    width: 300px;
+    height: 30px;
+    outline: none;
+   
+  }
+  .select-checkout {
+    width: 300px;
+    height: 30px;
+    
+   
+  }
+  
+  .container-input-checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+  }
+  .div-entregar-retirar {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }

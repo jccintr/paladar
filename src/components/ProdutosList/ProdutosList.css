@@ -1,0 +1,171 @@
+.container {
+  justify-content: center;
+}
+
+.titulo-categoria {
+  border-bottom: 4px solid #dd1f26;
+}
+
+.containerInput {
+  display: flex;
+  justify-content: center;
+}
+.inputPesquisa {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none !important;
+  border-width: 2px;
+}
+
+.card-item {
+  display: flex;
+  width: 100%;
+
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.card-produto-borda-sombra {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.coluna {
+  flex-direction: column;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.div-imagem {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+
+.imagemProduto {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  max-width: 80px;
+  max-height: 60px;
+  border-radius: 10px;
+}
+
+.produtoNome {
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.produtoIngredientes {
+  color: gray;
+  text-align: left;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.produtoPreco {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  background: #dd1f26;
+  color: white;
+  width: 70px;
+  padding: 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: right;
+  font-size: 14px;
+}
+
+.preco {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #dd1f26;
+
+  width: 70px;
+
+  font-weight: bold;
+  float: right;
+  font-size: 14px;
+}
+
+.botaoAdicionar {
+  background: #dd1f26;
+  color: white;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.pTitulo {
+  text-align: left;
+}
+
+.btPlusMinus {
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.campoQuantidade {
+  display: inline;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.boxQuantidade {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalItem {
+  text-align: right;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.boxTotalItem {
+  display: flex;
+  align-items: center;
+}
+
+.mensagem-imagens {
+  font-size: 12px;
+  color: gray;
+  font-style: italic;
+}
+
+.errMensagem {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
