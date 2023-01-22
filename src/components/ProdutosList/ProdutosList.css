@@ -1,3 +1,7 @@
+.lista {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 .container {
   justify-content: center;
 }
@@ -16,7 +20,7 @@
   width: 100%;
  
   margin: 10px;
-  height: 40px;
+  height: 30px;
   border-width: 1px;
   border-radius: 5px;
   padding: 5px;
@@ -161,6 +165,7 @@ input:focus {
   font-size: 12px;
   color: gray;
   font-style: italic;
+  margin-bottom: 10px;
 }
 
 .errMensagem {

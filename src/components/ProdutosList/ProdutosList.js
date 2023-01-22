@@ -44,7 +44,7 @@ const ProdutosList = ({
   }
 
   return (
-    <>
+    <div className="lista">
       <div className="containerInput">
         <input
           className="inputPesquisa"
@@ -60,7 +60,7 @@ const ProdutosList = ({
         ""
       )}
       {Categorias.map((categoria) => (
-        <div key={categoria.id}>
+        <div  key={categoria.id}>
           <TituloCategoria categoria={categoria} key={categoria.id} />
 
           {Produtos.filter(
@@ -75,7 +75,7 @@ const ProdutosList = ({
           As imagens são meramente ilustrativas
         </p>
       )}
-    </>
+    </div>
   );
 };
 
