@@ -49,7 +49,7 @@ const ProdutosList = ({
         <input
           className="inputPesquisa"
           placeholder="Pesquisar por produto ou ingrediente"
-          type="search"
+          type="text"
           onChange={inputPesquisaChange}
           value={search}
         />
