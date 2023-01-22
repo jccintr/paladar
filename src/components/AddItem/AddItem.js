@@ -69,13 +69,9 @@ const AddItem = ({ itensPedidoLen,handleAddItemPedido, setNovoItemPedido, produt
       <div className="corpo">
         <div className="linhaNome">
         <FaChevronLeft size={30}  onClick={()=>{navigate('/');}}/>
-        <div className="Nome">{itemPedido.Nome}</div>
+        <div className="nome">{itemPedido.Nome}</div>
         </div>
-        <img
-          className="img-produto"
-          alt="imagem do produto"
-          src={imagem}
-        />
+        <img className="img-produto" alt="imagem do produto" src={imagem}  />
         <div className="ingredientes">{itemPedido.Ingredientes}</div>
         <div className="div-obs">
           <p className="lbl-obs">Observações:</p>

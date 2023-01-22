@@ -1,23 +1,21 @@
 .corpo {
   width: "100%";
   height: "100%";
-
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
-}
+ }
+
 .linhaNome {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   
- 
 }
 
-.Nome {
+.nome {
   color: black;
   text-align: left;
   width: 300px;
@@ -63,12 +61,25 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .div-input-quantidade {
   width: 100px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.btQuant {
+  width: 40px;
+  font-weight: bold;
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 8px 5px 8px 5px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .input-quant {
@@ -81,18 +92,8 @@
   display: inline-block;
   vertical-align: middle;
 }
-.btQuant {
-  width: 40px;
-  font-weight: bold;
- 
-  background: #f2f2f2;
-  border-radius: 4px;
-  padding: 8px 5px 8px 5px;
-  border: 1px solid #ddd;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-}
+
+
 
 .bt-adicionar {
   padding: 10px;
