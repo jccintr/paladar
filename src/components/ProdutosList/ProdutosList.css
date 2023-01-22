@@ -9,12 +9,14 @@
 .containerInput {
   display: flex;
   justify-content: center;
+ 
+  background-color:white
 }
 .inputPesquisa {
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 30px;
+ 
+  margin: 10px;
+  height: 40px;
   border-width: 1px;
   border-radius: 5px;
   padding: 5px;
