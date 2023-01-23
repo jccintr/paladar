@@ -4,7 +4,6 @@ const Conteudo = ({ Produtos, ProdutosBackup, Categorias, setProdutos }) => {
   return (
     <main>
       <ProdutosList
-        
         Produtos={Produtos}
         ProdutosBackup={ProdutosBackup}
         Categorias={Categorias}

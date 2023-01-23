@@ -129,7 +129,6 @@ const handleDeleteItemPedido = (id) => {
   return (
     <div className="app">
       <Cabecalho />
-
       <Routes>
         <Route
           path="/"
@@ -143,7 +142,7 @@ const handleDeleteItemPedido = (id) => {
             ) : (
               !(getProdutosError || getCategoriasError || getTaxasError || getPagamentosError) && (
                 <Conteudo
-                   Produtos={Produtos}
+                  Produtos={Produtos}
                   ProdutosBackup={ProdutosBackup}
                   Categorias={Categorias}
                   setProdutos={setProdutos}

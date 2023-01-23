@@ -2,6 +2,7 @@ div.scrollmenu {
     background-color: #fff;
     overflow: auto;
     white-space: nowrap;
+   
   }
   
   div.scrollmenu a {
@@ -12,6 +13,4 @@ div.scrollmenu {
     text-decoration: none;
   }
   
-  div.scrollmenu a:hover {
-    background-color: #777;
-  }
+ 

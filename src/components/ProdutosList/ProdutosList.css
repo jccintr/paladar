@@ -1,6 +1,7 @@
 .lista {
   margin-right: 10px;
   margin-left: 10px;
+
 }
 
 .containerInput {
@@ -20,12 +21,10 @@
   font-size: 16px;
 }
 
-
 input:focus {
   outline: none !important;
   border-width: 2px;
 }
-
 .errMensagem {
   position: absolute;
   top: 50%;
@@ -34,11 +33,9 @@ input:focus {
   color: red;
   font-weight: bold;
 }
-
 .titulo-categoria {
   border-bottom: 4px solid #dd1f26;
 }
-
 .mensagem-imagens {
   font-style: italic;
   font-size: 10px;

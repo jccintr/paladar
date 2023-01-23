@@ -5,7 +5,7 @@ import logo from "../../assets/paladar.png";
 
 export default function Cabecalho({ openAdd }) {
   return (
-    <div className="toolbar">
+    <header>
       <div>
         <img className="imgLogo" src={logo} alt="Paladar Logo" />
       </div>
@@ -22,6 +22,6 @@ export default function Cabecalho({ openAdd }) {
           </p>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

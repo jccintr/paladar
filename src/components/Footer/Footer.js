@@ -13,7 +13,7 @@ const Footer = ({itensPedido}) => {
   }, [itensPedido]);
 
     return (
-      <footer className="footer">
+      <footer>
         <div className="left" onClick={()=>{navigate('/carrinho');}}>
           <div className="auxiliar">
             <FaShoppingCart size={20} />

@@ -36,7 +36,7 @@ const ProdutosList = ({
     if (arr.length) setHasProdutos(true);
 
     return arr.length ? (
-      <h3 className="titulo-categoria" key={props.categoria.id}>
+      <h3 id={props.categoria.Nome} className="titulo-categoria" key={props.categoria.id}>
         {props.categoria.Nome}
       </h3>
     ) : (

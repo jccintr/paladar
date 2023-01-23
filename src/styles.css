@@ -1,7 +1,15 @@
 .app {
-  margin-top: 120px;
-  margin-bottom:  50px;
+    
   font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+main {
+  position:absolute; 
+  top:122px; 
+  bottom:50px; 
+  left:0px; 
+  right:0px;
+  overflow:auto;
 }
 
 .errMensagem {
