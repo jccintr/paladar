@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./ProdutosList.css";
 
 import Produto from "../Produto/Produto";
+import CategoryList from "../CategoryList/CategoryList";
 
 const ProdutosList = ({
   Produtos,
@@ -45,6 +46,7 @@ const ProdutosList = ({
 
   return (
     <div className="lista">
+      <CategoryList categorias={Categorias}/>
       <div className="containerInput">
         <input
           className="inputPesquisa"
@@ -54,6 +56,7 @@ const ProdutosList = ({
           value={search}
         />
       </div>
+      
       {!HasProdutos ? (
         <p className="errMensagem">Nenhum item encontrado</p>
       ) : (
