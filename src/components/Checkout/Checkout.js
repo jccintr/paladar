@@ -46,7 +46,7 @@ const Checkout = ({Taxas,Pagamentos,itensPedido}) =>{
       };
     
   return (
-    <>
+    <main>
     <div className="corpoCheckout">
         <div className="div-titulo-checkout">
            <FaChevronLeft size={30}  onClick={()=>{navigate('/');}}/>
@@ -173,7 +173,7 @@ const Checkout = ({Taxas,Pagamentos,itensPedido}) =>{
           mensagem={msgBox.mensagem}
         />
       )}
-   </>
+   </main>
   )
 
 }

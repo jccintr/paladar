@@ -65,7 +65,7 @@ const AddItem = ({ itensPedidoLen,handleAddItemPedido, setNovoItemPedido, produt
   }
 
   return (
-    <>
+    <main>
       <div className="corpo">
         <div className="linhaNome">
         <FaChevronLeft size={30}  onClick={()=>{navigate('/');}}/>
@@ -99,7 +99,7 @@ const AddItem = ({ itensPedidoLen,handleAddItemPedido, setNovoItemPedido, produt
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

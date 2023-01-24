@@ -15,7 +15,7 @@ const Carrinho = ({itensPedido,handleDeleteItemPedido}) => {
   
 
     return (
-      <>
+      <main>
       
       <div className="corpoCarrinho">
         <div className="div-titulo">
@@ -40,7 +40,7 @@ const Carrinho = ({itensPedido,handleDeleteItemPedido}) => {
          </button>
         </> )}
      </div>
-     </>
+     </main>
     );
   };
   
