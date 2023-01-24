@@ -21,6 +21,7 @@ const App = () => {
   const [getPagamentosError, setGetPagamentosError] = useState(null);
   const [itensPedido, setItensPedido] = useState([]);
   const [novoItemPedido, setNovoItemPedido] = useState("");
+  
 
 
 

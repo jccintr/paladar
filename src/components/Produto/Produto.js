@@ -15,23 +15,15 @@ export default function Produto({ produto }) {
   }
 
   return (
-    <div
-      className="card-item"
-      key={produto.id}
-      onClick={ShowItemPedido}
-    >
+    <div className="card-item" key={produto.id} onClick={ShowItemPedido}>
       <div className="div-imagem">
-        <img
-          className="imagemProduto"
-          alt="imagem do produto"
-          src={produto.Imagem.url}
-        />
+        <img className="imagemProduto" alt="imagem do produto" src={produto.Imagem.url}/>
       </div>
       <div className="coluna">
         <div className="produtoNome">{produto.Nome}</div>
         <div className="produtoIngredientes">{produto.Ingredientes}</div>
         <div className="linhaPreco">
-          <div className="preco">R$ {produto.Preco}</div>
+           <div className="preco">R$ {produto.Preco}</div>
         </div>
       </div>
     </div>

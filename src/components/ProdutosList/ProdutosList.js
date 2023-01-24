@@ -3,13 +3,9 @@ import "./ProdutosList.css";
 
 import Produto from "../Produto/Produto";
 import CategoryList from "../CategoryList/CategoryList";
+import { FaSearch } from "react-icons/fa";
 
-const ProdutosList = ({
-  Produtos,
-  ProdutosBackup,
-  Categorias,
-  setProdutos
-}) => {
+const ProdutosList = ({Produtos,ProdutosBackup,Categorias,setProdutos}) => {
   const [HasProdutos, setHasProdutos] = useState(null);
   const [search, setSearch] = useState("");
 
@@ -29,15 +25,15 @@ const ProdutosList = ({
     setProdutos(novoArray);
   };
 
-  function TituloCategoria(props) {
+  function TituloCategoria({categoria}) {
     const arr = Produtos.filter(
-      (produto) => produto.Categoria.id === props.categoria.id
+      (produto) => produto.Categoria.id === categoria.id
     );
     if (arr.length) setHasProdutos(true);
 
     return arr.length ? (
-      <h3 id={props.categoria.Nome} className="titulo-categoria" key={props.categoria.id}>
-        {props.categoria.Nome}
+      <h3 id={categoria.Nome} className="titulo-categoria" key={categoria.id}>
+        {categoria.Nome}
       </h3>
     ) : (
       ""
@@ -48,13 +44,14 @@ const ProdutosList = ({
     <div className="lista">
       <CategoryList categorias={Categorias}/>
       <div className="containerInput">
-        <input
-          className="inputPesquisa"
-          placeholder="Pesquisar por produto ou ingrediente"
-          type="text"
-          onChange={inputPesquisaChange}
-          value={search}
-        />
+          <input
+            className="inputPesquisa"
+            placeholder="Pesquisar por produto ou ingrediente"
+            type="text"
+            onChange={inputPesquisaChange}
+            value={search}
+          />
+          <FaSearch className="icon" size={18} /> 
       </div>
       
       {!HasProdutos ? (
