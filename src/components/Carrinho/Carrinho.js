@@ -23,9 +23,7 @@ const Carrinho = ({itensPedido,handleDeleteItemPedido}) => {
         <div className="titulo-carrinho">Meu Carrinho</div>
         </div>
         {itensPedido.length === 0 ? (<><p>Seu Carrinho está vazio.</p>
-        <button className="bt-adicionar" style={{width:330}} onClick={()=>{navigate('/');}}>
-        Adicionar Itens
-       </button>
+        <button className="bt-adicionar" style={{width:330,marginTop:15}} onClick={()=>{navigate('/');}}>Adicionar Itens</button>
    </>
         
         
@@ -38,6 +36,7 @@ const Carrinho = ({itensPedido,handleDeleteItemPedido}) => {
         <button className="bt-adicionar" style={{width:330,marginBottom:15}} onClick={()=>{navigate('/checkout');}}>
               Finalizar Pedido
          </button>
+         <button className="bt-adicionar" style={{width:330}} onClick={()=>{navigate('/');}}>Adicionar Itens</button>
         </> )}
      </div>
      </main>

@@ -5,28 +5,24 @@ import Produto from "../Produto/Produto";
 import CategoryList from "../CategoryList/CategoryList";
 import { FaSearch } from "react-icons/fa";
 
-const ProdutosList = ({Produtos,ProdutosBackup,Categorias,setProdutos}) => {
+const ProdutosList = ({produtos,produtosBackup,categorias,setProdutos}) => {
   const [HasProdutos, setHasProdutos] = useState(null);
-  const [search, setSearch] = useState("");
-
-  const inputPesquisaChange = (event) => {
+  const [search, setSearch] = useState('');
+ 
+  const onchangeInput = (event) => {
     setSearch(event.target.value);
-    let novoArray = ProdutosBackup.filter(
-      (produto) =>
-        produto.Nome.toUpperCase().includes(event.target.value.toUpperCase()) ||
-        produto.Ingredientes.toUpperCase().includes(
-          event.target.value.toUpperCase()
-        ) ||
-        produto.Categoria.Nome.toUpperCase().includes(
-          event.target.value.toUpperCase()
-        )
+    let novoArray = produtosBackup.filter(
+      (produto) => produto.Nome.toUpperCase().includes(event.target.value.toUpperCase()) || produto.Ingredientes.toUpperCase().includes(event.target.value.toUpperCase()) || produto.Categoria.Nome.toUpperCase().includes(event.target.value.toUpperCase())
     );
     if (!novoArray.length) setHasProdutos(null);
     setProdutos(novoArray);
   };
 
-  function TituloCategoria({categoria}) {
-    const arr = Produtos.filter(
+
+
+  const TituloCategoria = ({categoria}) => {
+
+    const arr = produtos.filter(
       (produto) => produto.Categoria.id === categoria.id
     );
     if (arr.length) setHasProdutos(true);
@@ -42,13 +38,13 @@ const ProdutosList = ({Produtos,ProdutosBackup,Categorias,setProdutos}) => {
 
   return (
     <div className="lista">
-      <CategoryList categorias={Categorias}/>
+      <CategoryList categorias={categorias}/>
       <div className="containerInput">
           <input
             className="inputPesquisa"
             placeholder="Pesquisar por produto ou ingrediente"
             type="text"
-            onChange={inputPesquisaChange}
+            onChange={onchangeInput}
             value={search}
           />
           <FaSearch className="icon" size={18} /> 
@@ -59,11 +55,11 @@ const ProdutosList = ({Produtos,ProdutosBackup,Categorias,setProdutos}) => {
       ) : (
         ""
       )}
-      {Categorias.map((categoria) => (
+      {categorias.map((categoria) => (
         <div  key={categoria.id}>
           <TituloCategoria categoria={categoria} key={categoria.id} />
 
-          {Produtos.filter(
+          {produtos.filter(
             (produto) => produto.Categoria.id === categoria.id
           ).map((produto) => (
             <Produto produto={produto} key={produto.id} />

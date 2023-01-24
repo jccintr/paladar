@@ -11,9 +11,9 @@ import Checkout from "./components/Checkout/Checkout";
 const App = () => {
   const [Taxas, setTaxas] = useState([]);
   const [Pagamentos, setPagamentos] = useState([]);
-  const [Produtos, setProdutos] = useState([]);
-  const [ProdutosBackup, setProdutosBackup] = useState([]);
-  const [Categorias, setCategorias] = useState([]);
+  const [produtos, setProdutos] = useState([]);
+  const [produtosBackup, setProdutosBackup] = useState([]);
+  const [categorias, setCategorias] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [getProdutosError, setGetProdutosError] = useState(null);
   const [getCategoriasError, setGetCategoriasError] = useState(null);
@@ -143,9 +143,9 @@ const handleDeleteItemPedido = (id) => {
             ) : (
               !(getProdutosError || getCategoriasError || getTaxasError || getPagamentosError) && (
                 <Conteudo
-                  Produtos={Produtos}
-                  ProdutosBackup={ProdutosBackup}
-                  Categorias={Categorias}
+                  produtos={produtos}
+                  produtosBackup={produtosBackup}
+                  categorias={categorias}
                   setProdutos={setProdutos}
                 />
               )
@@ -154,7 +154,7 @@ const handleDeleteItemPedido = (id) => {
         />
         <Route path="/carrinho" element={<Carrinho  handleDeleteItemPedido={handleDeleteItemPedido} itensPedido={itensPedido} />} />
         <Route path="/checkout" element={<Checkout Taxas={Taxas} Pagamentos={Pagamentos} itensPedido={itensPedido}/> }/>
-        <Route path="/add" element={<AddItem  itensPedidoLen={itensPedido.length} handleAddItemPedido={handleAddItemPedido}  setNovoItemPedido={setNovoItemPedido} produtos={Produtos} />} />
+        <Route path="/add" element={<AddItem  itensPedidoLen={itensPedido.length} handleAddItemPedido={handleAddItemPedido}  setNovoItemPedido={setNovoItemPedido} produtos={produtos} />} />
       </Routes>
       <Footer itensPedido={itensPedido} />
     </div>

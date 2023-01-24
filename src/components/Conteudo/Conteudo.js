@@ -1,12 +1,12 @@
 import ProdutosList from "./../ProdutosList/ProdutosList";
 
-const Conteudo = ({ Produtos, ProdutosBackup, Categorias, setProdutos }) => {
+const Conteudo = ({ produtos, produtosBackup, categorias, setProdutos }) => {
   return (
     <main>
       <ProdutosList
-        Produtos={Produtos}
-        ProdutosBackup={ProdutosBackup}
-        Categorias={Categorias}
+        produtos={produtos}
+        produtosBackup={produtosBackup}
+        categorias={categorias}
         setProdutos={setProdutos}
       />
     </main>
