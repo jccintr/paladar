@@ -5,9 +5,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React from 'react'
 import MsgBox from './../MsgBox/MsgBox';
+import { useContext } from "react";
+import DataContext from "../../context/DataContext";
 
 
-const Checkout = ({Taxas,Pagamentos,itensPedido}) =>{
+const Checkout = ({Pagamentos,itensPedido}) =>{
+    const {taxas,pagamentos} = useContext(DataContext);
     const [nome,setNome] = useState('');
     const [telefone,setTelefone] = useState('');
     const [entregar,setEntregar] = useState(true);
@@ -102,7 +105,7 @@ const Checkout = ({Taxas,Pagamentos,itensPedido}) =>{
             <p className="label-checkout">Bairro:</p>
             <select className="select-checkout" onChange={(e)=>{setTaxaEntrega(e.target.value*1)}}>
                 <option value={0}>Selecione por favor</option>
-                {Taxas.map((taxa) => (
+                {taxas.map((taxa) => (
                 <option key={taxa.id} value={taxa.Valor}>{taxa.Bairro} R$ {taxa.Valor.toLocaleString(undefined, { minimumFractionDigits: 2 })}</option>
                 ))}
             </select>
@@ -133,7 +136,7 @@ const Checkout = ({Taxas,Pagamentos,itensPedido}) =>{
                // handleMsgBox("Você selecionou: " + op,true);
               }}
             >
-            {Pagamentos.map((pagamento) => (
+            {pagamentos.map((pagamento) => (
                 <option key={pagamento.id} value={pagamento.Descricao}>{pagamento.Descricao}</option>
                 ))}
             </select>

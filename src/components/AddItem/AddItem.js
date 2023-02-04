@@ -1,10 +1,13 @@
 import "./AddItem.css";
-import { FaAngleLeft } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import DataContext from "../../context/DataContext";
 
-const AddItem = ({ itensPedidoLen,handleAddItemPedido, setNovoItemPedido, produtos  }) => {
+//const AddItem = ({ itensPedidoLen,handleAddItemPedido, setNovoItemPedido, produtos  }) => {
+  const AddItem = ({ itensPedidoLen,handleAddItemPedido, setNovoItemPedido  }) => {
+    const {produtos} = useContext(DataContext);
   const navigate = useNavigate();
   const [quant, setQuant] = useState(1);
   const [vUnitario, setvUnitario] = useState(0);

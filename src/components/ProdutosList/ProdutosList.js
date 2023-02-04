@@ -4,8 +4,11 @@ import "./ProdutosList.css";
 import Produto from "../Produto/Produto";
 import CategoryList from "../CategoryList/CategoryList";
 import { FaSearch } from "react-icons/fa";
+import { useContext } from "react";
+import DataContext from "../../context/DataContext";
 
-const ProdutosList = ({produtos,produtosBackup,categorias,setProdutos}) => {
+const ProdutosList = () => {
+  const {produtos,produtosBackup,categorias,setProdutos} = useContext(DataContext);
   const [HasProdutos, setHasProdutos] = useState(null);
   const [search, setSearch] = useState('');
  

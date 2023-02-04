@@ -3,8 +3,8 @@ import "./CategoryList.css";
 
 const CategoryList = ({categorias}) => {
   return (
-    <div class="scrollmenu">
-     {categorias.map((categoria) =><a href={'#'+categoria.Nome}>{categoria.Nome}</a>)}
+    <div className="scrollmenu">
+     {categorias.map((categoria) =><a key={categoria.id} href={'#'+categoria.Nome}>{categoria.Nome}</a>)}
   
   </div>
   )
